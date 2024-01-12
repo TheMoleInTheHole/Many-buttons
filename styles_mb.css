@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:&display=swap');
+body {
+  font-family: 'Balsamiq sans', cursive;
+  font-weight: 600;
+  line-height: 1.8;
+}
+button {
+  font-family: 'Balsamiq sans', cursive;
+  font-weight: 600;
+}
+label {
+  font-family: 'Balsamiq sans', cursive;
+  font-weight: 600;
+}
+.title {
+  font-size: 21.5pt;
+  line-height: 0.1;
+}
+#mt, #ms, #goo {
+  text-decoration: none;
+}
+.form1 {
+  border: 2px inset black;
+  border-radius: 4px;
+  padding: 5px;
+  padding-left: 10px;
+  background-color: #cfe8ff;
+}

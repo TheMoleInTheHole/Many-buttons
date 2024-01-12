@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles_mb.css">
+  </head>
+  <body>
+    <script src="main_mb.js">
+      
+    </script>
+    <p class="title">Many Buttons</p>
+    <button onclick="enter_pwd();">Enter password</button>
+    <br>
+    <label id="pwd_lgr"></label><button onclick="window.location.reload();">Reload</button>
+    <br>
+    <button onclick="replace_button_text();" id="rand_bin_1">00 FF F7 8F EE B3 77 00 0F FC CD 38 41 64 65 65 00 0F FF F0</button>
+    <br>
+    <button onclick="replace_button_txt_reset();">Reset button above</button>
+    <br>
+    <button onclick="mtagain();">MoleTech again</button>
+    <br>
+    <select id="selmtmsgoo" onchange="window.open((this.options[this.selectedIndex].value),'_blank')">
+      <option disabled selected id="sel1">--Select--</option>
+      <option id="mt" value="https://moletech.powerappsportals.com">MoleTech</option>
+      <option id="ms" value="https://microsoft.com">Microsoft</option>
+      <option id="goo" value="https://google.com">Google</option>
+    </select>
+    <br>
+    <button onclick="rd1ts();">Reset dropdown to "--Select--"</button>
+    <br>
+    <input id="inp1">
+    <button onclick="returninp1();">Return value</button>
+    <button onclick="importinp1v();">Import</button>
+    <button onclick="exportinp1v();">Export</button>
+    <button onclick="clearinp1();">Clear</button>
+    <br>
+    <input placeholder="Enter password..." id="inp2">
+    <button onclick="submit">Submit</button>
+    <br>
+    <div class="form1">
+      <form>
+        Organism: <input id="F1Fi1" placeholder="Hover here for hint" onpointerover="this.placeholder = 'Enter the organism that you are (ex. Human, mole, etc)'" style="width: 512px">
+        <br>
+        Home: <input id="F1Fi2" placeholder="Hover here for hint" onpointerover="this.placeholder = 'Enter the home that you live in (ex. House, hole, etc)'" style="width: 512px;">
+        <br>
+        <button onclick="getResults1();">Get results</button>
+      </form>
+    </div>
+  </body>
+</html>
