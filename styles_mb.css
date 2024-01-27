@@ -3,6 +3,9 @@ body {
   font-family: 'Balsamiq sans', cursive;
   font-weight: 600;
   line-height: 1.8;
+  padding: 0.25%;
+  margin-left: 10px;
+  margin-top: -5px;
 }
 button {
   font-family: 'Balsamiq sans', cursive;
@@ -12,10 +15,41 @@ label {
   font-family: 'Balsamiq sans', cursive;
   font-weight: 600;
 }
+.inp1bs {
+  width: 97px;
+  height: 25px;
+}
+.btn_1_span {
+  color: #0000ff;
+  text-align: center;
+}
+.btn_1 {
+  width: 100px;
+  height: 50px;
+  background-color: #00bb00;
+  border-color: #000000;
+  border-width: 4px;
+  border-radius: 4px;
+  padding-left: 0%;
+  margin-top: 5px;
+  opacity: 1;
+}
+.btn_1:hover{
+  transition: 0.65s cubic-bezier(0,0,0.5,1);
+  transition-property: background-color, opacity;
+  background-color: #00d800;
+  opacity: 0.8;
+  cursor: pointer;
+}
 .title {
   font-size: 21.5pt;
   line-height: 0.1;
 }
+.form1title {
+  font-size: 16;
+  line-height: 0.1;
+}
+
 #mt, #ms, #goo {
   text-decoration: none;
 }
@@ -25,4 +59,40 @@ label {
   padding: 5px;
   padding-left: 10px;
   background-color: #cfe8ff;
+}
+.tooltips-global {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltips-global .tooltiptext-global {
+  visibility: hidden;
+  width: 180px;
+  background-color: black;
+  color: #008800;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 0;
+  opacity: 0;
+  transition: opacity 1s;
+  position: absolute;
+  z-index: 1;
+  bottom: 132%;
+  left: 20%;
+  margin-left: -60px;
+}
+.tooltips-global .tooltiptext-global::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltips-global:hover .tooltiptext-global {
+  visibility: visible;
+  opacity: 0.75;
 }
