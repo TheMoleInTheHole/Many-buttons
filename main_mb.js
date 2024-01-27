@@ -1,7 +1,7 @@
 import "node:fs";
 import {readFile, writeFile} from 'node:fs';
 function enter_pwd() {
-  pwd = prompt("Enter password...", "Hint: Name of company whose website you are trying to access.");
+  pwd = window.prompt("Enter password...", "Hint: Name of company whose website you are trying to access.");
   if (pwd === null){
     return;
   }
@@ -19,13 +19,13 @@ function enter_pwd() {
   }
 }
 function replace_button_text(){
-  document.getElementById("rand_bin_1").innerHTML = " ÿ÷„î³w  üÍ8Abee  ÿð"
+  document.getElementById("rand_bin_1").innerHTML = " ÿ÷„î³w  üÍ8Abee  ÿð";
 }
 function replace_button_txt_reset(){
-  document.getElementById("rand_bin_1").innerHTML = "00 FF F7 8F EE B3 77 00 0F FC CD 38 41 64 65 65 00 0F FF F0"
+  document.getElementById("rand_bin_1").innerHTML = "00 FF F7 8F EE B3 77 00 0F FC CD 38 41 64 65 65 00 0F FF F0";
 }
 function mtagain(){
-  window.open("https://moletech.powerappsportals.com", "MoleTech", `width=875,height=450,`);
+  window.open("https://moletech.powerappsportals.com", "MoleTech", `width=875,height=450`);
 }
 function mt(){
   window.open("https://moletech.powerappsportals.com");
@@ -45,15 +45,21 @@ function returninp1(){
   alert(inp1);
 }
 function mtpwdinp(){
-  var inp2 = document.getElementById("")
+  const inp2 = document.getElementById("inp2");
+  if (inp2 === "MoleTech"){
+    window.open("https://moletech.powerappsportals.com");
+  }
+  else{
+    window.alert("Incorrect password", "The password entered is incorrect.")
+  }
 }
 const exportinp1v = () => {
-  const inp1txt = "/Saves/inp1/inp1.log"
+  const inp1txt = "/Saves/inp1/Temp/inp1.mbTemp"
   const inp1a = document.createElement("a");
   const inp1v = document.getElementById("inp1").value;
   const fileinp1 = new Blob([inp1v], { type: 'text/plain' });
   inp1a.href = URL.createObjectURL(fileinp1);
-  inp1a.download = "inp1.log";
+  inp1a.download = "inp1.mbTemp";
   inp1a.click();
   URL.revokeObjectURL(inp1a.href);
 };
@@ -61,16 +67,19 @@ function clearinp1(){
   document.getElementById("inp1").value = "";
 }
 function importinp1v(){
-  readFile("/Saves/inp1/inp1.log", (err, data) => {
+  readFile("/Saves/inp1/inp1.mbSave,saveData.dataSet(userChoice).data", (err, data) => {
     if (err) throw err;
     console.log(data);
     document.getElementById("inp1").value = data;
   }); 
 }
+function saveinp1(){
+  
+}
 function getResults1(){
   F1Fi1 = document.getElementById("F1Fi1").value;
   F1Fi2 = document.getElementById("F1Fi2").value;
-  alert("You are a(n) " + F1Fi1 + " and you live in a " + F1Fi2 + ".");
+  alert("You are a(n) " + F1Fi1 + " and you live in a(n) " + F1Fi2 + ".");
   function addParams() {
     var thisurl = new URL("/");
     thisurl.searchParams.append("organism", F1Fi1);
@@ -81,10 +90,10 @@ function getResults1(){
 function leaveSiteAlert(){
   const lsa = window.confirm("Leave site?", "Your changes may not be saved.");
   if (lsa === null){
-    return
+    return;
   }
   else{
-    window.close
+    window.close;
   }
 }
 document.addEventListener("keydown", function(event){ 
