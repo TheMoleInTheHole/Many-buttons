@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
+    <title>Many Buttons</title>
     <link rel="stylesheet" href="styles_mb.css">
+    <link rel="icon" href="/Images/favicon.ico">
   </head>
   <body>
-    <script src="main_mb.js">
-      
-    </script>
+    <script type="text/javascript" src="main_mb.js"></script>
     <p class="title">Many Buttons</p>
     <button onclick="enter_pwd();">Enter password</button>
     <br>
@@ -28,23 +28,44 @@
     <br>
     <button onclick="rd1ts();">Reset dropdown to "--Select--"</button>
     <br>
-    <input id="inp1">
-    <button onclick="returninp1();">Return value</button>
-    <button onclick="importinp1v();">Import</button>
-    <button onclick="exportinp1v();">Export</button>
-    <button onclick="clearinp1();">Clear</button>
+    <input id="inp1" placeholder="Enter some text...">
+    <div class="tooltips-global">
+      <button onclick="returninp1()" class="inp1bs">Return value</button>
+      <span class="tooltiptext-global">Returns the value of the field as an alert.</span>
+    </div>
+    <div class="tooltips-global">
+      <button onclick="clearinp1()" class="inp1bs">Clear field</button>
+      <span class="tooltiptext-global">Clears the field.</span>
+    </div>
+    <div class="tooltips-global">
+      <button onclick="importinp1v()" class="inp1bs">Import</button>
+      <span class="tooltiptext-global">Imports text to the field from a file.</span>
+    </div>
+    <div class="tooltips-global">
+      <button onclick="exportinp1v()" class="inp1bs">Export</button>
+      <span class="tooltiptext-global">Saves the text in the field to a file. (Use this only once unless you are saving to different locations).</span>
+    </div>
+    <div class="tooltips-global">
+      <button onclick="saveinp1()" class="inp1bs">Save</button>
+      <span class="tooltiptext-global">Adds text from the field to an existing save file. (Use this to add data to exported file (only works for the one saved in the default location)).</span>
+    </div>
     <br>
     <input placeholder="Enter password..." id="inp2">
     <button onclick="submit">Submit</button>
     <br>
     <div class="form1">
       <form>
-        Organism: <input id="F1Fi1" placeholder="Hover here for hint" onpointerover="this.placeholder = 'Enter the organism that you are (ex. Human, mole, etc)'" style="width: 512px">
+        <h2 class="form1title">Enter your info here.</h2>
+        Organism: <input id="F1Fi1" placeholder="Hover here for hint" onpointerover="this.placeholder = 'Enter the organism that you are (ex. Human, mole, etc) (lowercase)'" style="width: 512px">
         <br>
-        Home: <input id="F1Fi2" placeholder="Hover here for hint" onpointerover="this.placeholder = 'Enter the home that you live in (ex. House, hole, etc)'" style="width: 512px;">
+        Home: <input id="F1Fi2" placeholder="Hover here for hint" onpointerover="this.placeholder = 'Enter the home that you live in (ex. House, hole, etc) (lowercase)'" style="width: 512px;">
         <br>
-        <button onclick="getResults1();">Get results</button>
+        <button onclick="getResults1()">Get results</button>
       </form>
+    </div>
+    <div class="btn_1" onclick="window.alert('YAY! You clicked me!');">
+      <span class="btn_1_span">Click me!</span>
     </div>
   </body>
 </html>
+
