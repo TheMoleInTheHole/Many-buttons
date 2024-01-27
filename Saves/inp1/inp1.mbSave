@@ -1,0 +1,20 @@
+script{
+  var(int) amountDs = thisFile.saveData.getFunctionByName("dataSet").count;
+  var(int) latestDs = thisFile.saveData.getFunctionByName("dataSet").farthestInFile.lineNum;
+  var(localFileRelative) temp = "\Temp\inp1.mbTemp"
+  while(true){
+    if(temp.writtenTo.withinTime("10sec") == true){
+      New var: varId = "cdsc", cdsc.varName = "ds"+amountDs+1, cdsc.varType = mix, cdsc.varValue = amountDs+1;
+      Declare function.exists("dataSet") as "dset"{
+        Set arg.setOrder = getVarById("cdsc");
+        Set arg.data = temp.fileData(ALL,exclude(.mbTempIgnore);
+        dset.lineNum = [relative, latestDs+1];
+      }
+      wait.sec(15);
+      temp.fileData.clear(ALL);
+    }
+  }
+}
+saveData{
+  dataSet(1, "First 15 numbers in the Fibonacci sequence: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 600");
+}
