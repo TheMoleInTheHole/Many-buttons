@@ -4,4 +4,4 @@ This is just a test and is really for my own purposes, but I don't care if other
 If you use this for something, you have to give me credit.
 
 ## Main site:
-[Many Buttons](many buttons.html)
+[Many Buttons](https://themoleinthehole.github.io/Many-buttons/many%20buttons.html)
